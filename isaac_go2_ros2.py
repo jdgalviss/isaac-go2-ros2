@@ -76,6 +76,10 @@ def run_simulator(cfg):
 
     # Run simulation
     sim_step_dt = float(go2_env_cfg.sim.dt * go2_env_cfg.decimation)
+    sim_step_dt = 0.075
+    print(f"sim_step_dt: {sim_step_dt}")
+    print(f"go2_env_cfg.sim.dt: {go2_env_cfg.sim.dt}")
+    print(f"go2_env_cfg.decimation: {go2_env_cfg.decimation}")
     obs, _ = env.reset()
     while simulation_app.is_running():
         start_time = time.time()
